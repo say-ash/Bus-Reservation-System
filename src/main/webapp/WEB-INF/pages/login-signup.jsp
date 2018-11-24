@@ -20,11 +20,11 @@
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
-                        <form action="LoginServlet" id="loginform" class="form-horizontal" role="form" method="post">
+                        <form action="login" id="loginform" class="form-horizontal" role="form" method="post">
                                     
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="login-username" type="text" class="form-control" name="emailid" placeholder="email" required>                                        
+                                        <input id="login-username" type="text" class="form-control" name="emailId" placeholder="email" required>                                        
                                     </div>
                                 
                             <div style="margin-bottom: 25px" class="input-group">
@@ -117,7 +117,7 @@
                               <div class="form-group">
                                     <label for="contact_no" class="col-md-3 control-label">Contact Number</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="contactNumber" placeholder="Contact Number"  required>
+                                        <input type="tel" class="form-control" name="contactNumber" placeholder="Contact Number"  required>
                                     </div>
                                 </div>
 

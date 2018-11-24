@@ -17,11 +17,9 @@ public class UserService implements InterfaceUserService {
 		return userDao.saveUser(r);
 	}
 	
-	public int validateUser(Login l) {
+	public boolean validateUser(Login l) {
 		return userDao.validateUser(l);
 	}
-
-	
 
 
 }

@@ -7,6 +7,5 @@ public interface InterfaceUserService {
 
 	
 	public int saveUser(User r);
-
-	public int validateUser(Login l);
+	public boolean validateUser(Login l);
 }

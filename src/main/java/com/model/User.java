@@ -4,8 +4,9 @@ public class User {
 	
 	private String firstName;
 	private String lastName;
-	private int contactNumber;
-	private Login login;
+	private long contactNumber;
+	private String emailId;
+	private String password;
 	
 	public User() {
 	}
@@ -26,39 +27,31 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public Login getLogin() {
-		return login;
-	}
-
-	public void setLogin(Login login) {
-		this.login = login;
-	}
-
-	public int getContactNumber() {
+	public long getContactNumber() {
 		return contactNumber;
 	}
 
-	public void setContactNumber(int contactNumber) {
+	public void setContactNumber(long contactNumber) {
 		this.contactNumber = contactNumber;
 	}
 
-	
-
 	public String getEmailId() {
-		return login.getEmailId();
+		return emailId;
 	}
 
 	public void setEmailId(String emailId) {
-		login.setEmailId(emailId);
+		this.emailId = emailId;
 	}
 
 	public String getPassword() {
-		return login.getPassword();
+		return password;
 	}
 
 	public void setPassword(String password) {
-		login.setPassword(password);
-	}
+		this.password = password;
+	}	
+
+	
 
 	
 	

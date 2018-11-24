@@ -26,38 +26,31 @@ public class UserController {
 	        return new ModelAndView("login-signup");
  }
 
-	
 	@Autowired
 	private InterfaceUserService userService;
 	@RequestMapping(value = "/register", method=RequestMethod.POST)
-	public ModelAndView save(@ModelAttribute User r,@ModelAttribute Login l) {
+	public ModelAndView saveUser(@ModelAttribute User r) {
 	
 		int i = userService.saveUser(r);
 		if(i>0)
-			return new ModelAndView("thankyou");
-		else
-			return new ModelAndView("thankyou");
-			
-		
+			return new ModelAndView("login-signup");
+		else 
+			return null;
 		}
 	
-	@Autowired
-	private InterfaceUserService userService1;
-	@RequestMapping("/register1")
-	public void validate(@ModelAttribute Login l) {
-	
-		userService1.validateUser(l);
+	 @RequestMapping(value = "/login", method = RequestMethod.POST)
+	  public ModelAndView checkLogin(@ModelAttribute Login l) {
 		
-		
-		}
-	 @RequestMapping(value = "/login", method = RequestMethod.GET)
-	  public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
-	    ModelAndView mav = new ModelAndView("login");
-	    mav.addObject("login", new Login());
-	    return mav;
+		 Boolean check = userService.validateUser(l);
+		 if(check)
+			 return new ModelAndView("thankyou");
+		 else
+		 return new ModelAndView("not");
+
+		 
+	    
 	  }
 	
-
 }
 		
 	

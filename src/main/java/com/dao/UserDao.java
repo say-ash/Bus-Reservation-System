@@ -1,6 +1,7 @@
 package com.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
@@ -17,20 +18,34 @@ public class UserDao implements InterfaceUserDao {
 	}  
 	  
 	public int saveUser(User r) {
-		 String query="insert into GROUP9_BUS_USER values('"+r.getFirstName()+"','"+r.getLastName()+"','"+r.getEmailId()+"',"+r.getPassword()+"'"+r.getContactNumber()+")";  
+			String query1 = "select group9_bus_users_seq.nextval from dual";
+			int query2 = getSeq(query1);
+		 String query="insert into GROUP9_BUS_USERS values("+query2+",'"+r.getFirstName()+"','"+r.getLastName()+"','"+r.getEmailId()+"','"+r.getPassword()+"',"+r.getContactNumber()+")";  
 		    return jdbcTemplate.update(query);  
 	}
 
-	public int validateUser(Login l) {
-		String username=l.getEmailId();
-		String password=l.getPassword();
-		String sql= "select * from GROUP9_BUS_USER where GBU_EMAIL_ID='" + l.getEmailId() + "' and password='" + l.getPassword()+ "'";
-		jdbcTemplate.execute(sql);
+	private int getSeq(String query1) {
 		
-		return 0;
+		int res = jdbcTemplate.queryForObject(query1, Integer.class);
+		return res;
 	}
 
+	public boolean validateUser(Login l) {
+		
+		String email= "select GBU_EMAIL_ID from GROUP9_BUS_USERS where GBU_EMAIL_ID='" + l.getEmailId() + "'";
+		String password= "select GBU_PASSWORD from GROUP9_BUS_USERS where GBU_PASSWORD='" + l.getPassword() + "'";
+		String e = jdbcTemplate.queryForObject(email, String.class);
+		System.out.println(e);
 	
+		String p = jdbcTemplate.queryForObject(password, String.class);
+		System.out.println(p);
+		
+		if(l.getEmailId().equals(e) && l.getPassword().equals(p)) { 
+		return true;
+		
+	}	
+		else
+			return false;
 	
-	
+	}
 }
