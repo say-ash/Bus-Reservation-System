@@ -28,6 +28,7 @@ public class UserController {
 
 	@Autowired
 	private InterfaceUserService userService;
+	
 	@RequestMapping(value = "/register", method=RequestMethod.POST)
 	public ModelAndView saveUser(@ModelAttribute User r) {
 	

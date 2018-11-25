@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -19,7 +21,8 @@ public class SearchController {
 	@RequestMapping(value = "/search")
 	public void search(@ModelAttribute BusSearch b) {
 	
-		searchService.searchBus(b);
+		@SuppressWarnings("unchecked")
+		List<Object> list = (List<Object>) searchService.searchBus(b);
 	}
 	
 	
