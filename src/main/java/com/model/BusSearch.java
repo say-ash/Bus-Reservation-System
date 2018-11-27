@@ -1,13 +1,13 @@
 package com.model;
 
-import java.util.Date;
+
 
 public class BusSearch {
 
 	private String source;
 	private String destination;
-	private Date doj;
-	private Date dor;
+	private String doj;
+	private String dor;
 	
 	public BusSearch() {
 	}
@@ -28,19 +28,19 @@ public class BusSearch {
 		this.destination = destination;
 	}
 
-	public Date getDoj() {
+	public String getDoj() {
 		return doj;
 	}
 
-	public void setDoj(Date doj) {
+	public void setDoj(String doj) {
 		this.doj = doj;
 	}
 
-	public Date getDor() {
+	public String getDor() {
 		return dor;
 	}
 
-	public void setDor(Date dor) {
+	public void setDor(String dor) {
 		this.dor = dor;
 	}
 	

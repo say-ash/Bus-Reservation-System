@@ -15,7 +15,10 @@ import com.model.Login;
 import com.model.User;
 import com.service.InterfaceUserService;
 
-
+/**
+ * This is to mention it is the Controller 
+ *
+ */
 
 @Controller
 public class UserController {
@@ -44,7 +47,7 @@ public class UserController {
 		
 		 Boolean check = userService.validateUser(l);
 		 if(check)
-			 return new ModelAndView("thankyou");
+			 return new ModelAndView("home");
 		 else
 		 return new ModelAndView("not");
 

@@ -5,6 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Index</title>
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css"/>">
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/animate.css"/>">
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/bootstrap.css"/>">
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/jquery-ui.css"/>">
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/font-awesome.css"/>">
 </head>
  <body>
         <form action="first.html">
