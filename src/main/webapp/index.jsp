@@ -24,5 +24,6 @@
 <input type="submit" value="Search">
 </form>
 
+<input type="text" >
 </body>
 </html>
