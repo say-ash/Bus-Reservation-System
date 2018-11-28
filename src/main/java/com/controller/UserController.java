@@ -44,14 +44,21 @@ public class UserController {
 		
 		 Boolean check = userService.validateUser(l);
 		 if(check)
-			 return new ModelAndView("home");
+			 return new ModelAndView("userhome");
 		 else
-		 return new ModelAndView("not");
-
-		 
-	    
+		 return new ModelAndView("not");  
 	  }
 	
+	 @RequestMapping(value = "/last", method = RequestMethod.POST)
+	  public ModelAndView logoutUser(@ModelAttribute Login l) {
+		
+		 Boolean check = userService.validateUser(l);
+		 if(check)
+			 return new ModelAndView("home");
+		 else
+		 return new ModelAndView("not");  
+	  }
+	 
 }
 		
 	

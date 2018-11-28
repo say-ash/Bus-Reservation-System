@@ -1,9 +1,10 @@
 <html>
 <head>
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css2">
+<link href="css/bootstrap.css" rel="stylesheet" id="bootstrap-css2">
 
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-1.12.0.min.js"></script>
+ <%@ page errorPage = "error.jsp" %>
 
 
 </head>
@@ -46,7 +47,7 @@
 
                                     <div class="col-sm-12 controls">
                                       <input type="submit" id="btn-login" class="btn btn-success" value="Login"/>
-                                      <a id="btn-cancel" href="index.html" class="btn btn-success">Cancel  </a>
+                                      <a id="btn-cancel" href="home.jsp" class="btn btn-success">Cancel  </a>
                                     </div>
                                 </div>
                                 
@@ -125,7 +126,7 @@
                                     <!-- Button -->                                        
                                     <div class="col-md-offset-3 col-md-9">
                                         <input id="btn-signup" type="submit" class="btn btn-info" class="icon-hand-right" value="Sign Up">
-                                        <button id="btn-cancel1" type="button" class="btn btn-info" onclick="location.href = 'index.jsp';" ><i class="icon-hand-right"></i>Cancel</button>
+                                        <button id="btn-cancel1" type="button" class="btn btn-info" onclick="location.href = 'home.jsp';" ><i class="icon-hand-right"></i>Cancel</button>
                                     </div>
                                 </div>                              
                             </form>

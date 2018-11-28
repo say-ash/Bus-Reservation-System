@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@ page errorPage = "error.jsp" %>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -15,7 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href="css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="css/jquery-ui.css" />
+	<link rel="stylesheet" href="css/jquery-ui.css" />
 <!-- Custom Theme files -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -38,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</ul>
 		<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s"> 
 			<li class="tol">Toll Number : 123-4568790</li>				
-			<li class="sig"><a href="C:/Users/vshadmin/Desktop/green_wheels/web/login-signup.html">Login|Signup</a>
+			<li class="sig"><a href="first.html">Login|Signup</a>
         </ul>
 		<div class="clearfix"></div>
 	</div>
@@ -48,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
 	<div class="container">
 		<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-			<a href="index.html">Green <span>Wheels</span></a>	
+			<a href="index.html">Bus <span>Reservation System</span></a>	
 		</div>
 		<div class="bus wow fadeInUp animated" data-wow-delay=".5s">
             <a href="index.html" class="buses active">BUSES</a>
@@ -62,6 +64,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <!--- /header ---->
+
+
+
 <!--- footer-btm ---->
 <div class="footer-btm wow fadeInLeft animated" data-wow-delay=".5s">
 	<div class="container">
@@ -96,12 +101,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--- /footer-btm ---->
 <!--- banner ---->
+<form action="search.html">
 <div class="banner">
 	<div class="container">
 		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Green Wheels - Best in Class for Bus booking Service</h1>
 	</div>
 </div>
-<form action= "search.html">
 <div class="container">
 	<div class="col-md-5 bann-info1 wow fadeInLeft animated" data-wow-delay=".5s">
 		<i class="fa fa-columns"></i>
@@ -111,42 +116,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h2>Online Tickets with Zero Booking Fees</h2>
 		<div class="ban-top">
 			<div class="bnr-left">
-				<label class="inputLabel">Leaving from</label>
-				<input class="city" type="text" name="source"  value="Enter a city" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a city';}" required=>
+				<label class="inputLabel">From</label>
+				<input class="city" type="text" name="source" placeholder="Enter source" required/>
 			</div>
 			<div class="bnr-left">
-				<label class="inputLabel">Going to</label>
-				<input class="city" type="text" name="destination" value="Enter a city" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a city';}" required=>
+				<label class="inputLabel">To</label>
+				<input class="city" type="text" name="destination" placeholder="Enter destination"  required=>
 			</div>
 				<div class="clearfix"></div>
 		</div>
 		<div class="ban-bottom">
 			<div class="bnr-right">
 				<label class="inputLabel">Date of Journey</label>
-				<input class="date" id="datepicker" type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}" required=>
+				<input type="date" name="doj" required/>
 			</div>
 			<div class="bnr-right">
 				<label class="inputLabel">Date of Return<span class="opt">&nbsp;(Optional)</span></label>
-				<input class="date" id="datepicker1" type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}" required=>
+				<input type="date" name="dor" >
 			</div>
 				<div class="clearfix"></div>
 				<!---start-date-piker---->
-				
-				<script src="js/jquery-ui.js"></script>
-					<script>
-						$(function() {
-						$( "#datepicker,#datepicker1" ).datepicker();
-						});
-					</script>
+			
+			
 			<!---/End-date-piker---->
 		</div>
 		<div class="sear">
-			
 				<button class="seabtn">Search Buses</button>
 			
 		</div>
 	</div>
-	
 	<div class="clearfix"></div>
 </div>
 </form>

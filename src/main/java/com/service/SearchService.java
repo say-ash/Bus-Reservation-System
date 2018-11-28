@@ -16,6 +16,6 @@ public class SearchService implements InterfaceSearchService{
 		return searchDao.searchBus(b);
 	
 	}
-
+	
 	
 }

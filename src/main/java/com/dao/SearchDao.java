@@ -21,7 +21,7 @@ public class SearchDao implements InterfaceSearchDao{
 public List<SearchResult> searchBus(BusSearch b) {
 		
 		
-		
+		System.out.println("inside con"+b.getSource());
 		String q= "select * from (select b.gbs_gbd_id, a.gbs_stop_name as source, b.gbs_stop_name as destination,b.gbs_arrival_time, b.gbs_departure_time, abs(a.gbs_distance - b.gbs_distance) as Distance, abs(a.gbs_price - b.gbs_price) as estimated_price from group9_bus_stops a inner join group9_bus_stops b on a.gbs_gbd_id=b.gbs_gbd_id where a.gbs_stop_name=? and b.gbs_stop_name=?) t1 inner join (select bd.gbd_id ,bd.GBD_NAME,bt.GBT_TYPE from group9_bus_details bd inner join group9_bus_types bt on bd.gbd_id=bt.GBT_BD_ID inner join group9_bus_status_check bs on bs.GBSC_GBD_ID=bd.gbd_id where bs.GBSC_DATE = ? and bs.GBSC_STATUS = 'available') t2 on t1.gbs_gbd_id = t2.gbd_id";
 		Object[] inputs = new Object[] {b.getSource(),b.getDestination(),b.getDoj()};
 		return jdbcTemplate.query(q,inputs, new RowMapper<SearchResult>(){
