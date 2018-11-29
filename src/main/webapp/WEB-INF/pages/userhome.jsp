@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</ul>
 		<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s"> 
 			<li class="tol">Toll Number : 123-4568790</li>				
-			<li class="sig"><a href="last.html">Logout</a>
+			<li class="sig"><a href="home.jsp">Logout</a>
         </ul>
 		<div class="clearfix"></div>
 	</div>

@@ -74,7 +74,7 @@ public class AdminController {
 		 else {
 			 userservice.insertNewBus(br);
 		 }
-		return new ModelAndView("insertNewBus"); 
+		return new ModelAndView("successfull"); 
 	   }
 	 @PostMapping("/addMoreStops")
 	   public  ModelAndView addMoreStopsDetails(@ModelAttribute StopsDetails sd, Model model) {
@@ -88,7 +88,7 @@ public class AdminController {
 			 userservice.AddNewStops(sd);
 		 }
 		 
-		return new ModelAndView("AdminIndex"); 
+		return new ModelAndView("successfull"); 
 	   }
 	 
 

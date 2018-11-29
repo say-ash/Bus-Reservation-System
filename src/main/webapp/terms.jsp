@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</ul>
 		<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s"> 
 			<li class="tol">Toll Number : 123-4568790</li>				
-			<li class="sig"><a href="C:/Users/vshadmin/Desktop/green_wheels/web/login-signup.html">Login|Signup</a>
+			<li class="sig"><a href="first.html">Login|Signup</a>
 		<div class="clearfix"></div>
 	</div>
 </div>
@@ -83,10 +83,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<nav class="cl-effect-1">
 						<ul class="nav navbar-nav">
-							<li><a href="about.html">About</a></li>
-								<li><a href="faq.html">Faq</a></li>
-								<li class="active"><a href="terms.html">Terms of Use</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="about.jsp">About</a></li>
+								<li><a href="faq.jsp">FAQ</a></li>
+								<li class="active"><a href="terms.jsp">Terms of Use</a></li>
+								<li><a href="contact.jsp">Contact Us</a></li>
 								<div class="clearfix"></div>
 						</ul>
 					</nav>

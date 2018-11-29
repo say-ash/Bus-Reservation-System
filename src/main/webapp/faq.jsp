@@ -1,13 +1,9 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Green Wheels a Bus booking Service | About :: w3layouts</title>
+<title>Green Wheels a Bus booking Service | Faq ::</title>
+ <%@ page errorPage = "error.jsp" %>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Green Wheels Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -19,7 +15,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href="css/font-awesome.css" rel="stylesheet">
- <%@ page errorPage = "error.jsp" %>
 <!-- Custom Theme files -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -42,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</ul>
 		<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s"> 
 			<li class="tol">Toll Number : 123-4568790</li>				
-			<li class="sig"><a href="C:/Users/vshadmin/Desktop/green_wheels/web/login-signup.html">Login|Signup</a>
+			<li class="sig"><a href="first.html">Login|Signup</a>
         </ul>
 		<div class="clearfix"></div>
 	</div>
@@ -52,10 +47,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
 	<div class="container">
 		<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-			<a href="index.html">BUS RESERVATION<span>SYSTEM</span></a>	
+			<a href="index.html">Green <span>Wheels</span></a>	
 		</div>
 		<div class="bus wow fadeInUp animated" data-wow-delay=".5s">
             <a href="index.html" class="buses active">BUSES</a>
+ 
         </div>
 		<div class="lock fadeInDown animated" data-wow-delay=".5s"> 
 			<li><i class="fa fa-lock"></i></li>
@@ -84,10 +80,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<nav class="cl-effect-1">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="about.html">About</a></li>
-								<li><a href="faq.html">Faq</a></li>
-								<li><a href="terms.html">Terms of Use</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="about.jsp">About</a></li>
+								<li class="active"><a href="faq.jsp">FAQ</a></li>
+								<li><a href="terms.jsp">Terms of Use</a></li>
+								<li><a href="contact.jsp">Contact Us</a></li>
 								<div class="clearfix"></div>
 						</ul>
 					</nav>
@@ -100,76 +96,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--- /footer-btm ---->
 <!--- banner-1 ---->
-<div class="banner-1">
+<div class="banner-1 ">
 	<div class="container">
 		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Green Wheels - Best in Class for Bus Booking Service</h1>
 	</div>
 </div>
 <!--- /banner-1 ---->
-<!--- about ---->
-<div class="about">
+<!--- faq ---->
+<div class="faq">
 	<div class="container">
-		<div class="about-top wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">
-			<h2>Our Story</h2>
-			<p>1 bus ticketing and hotel room reservation platform, was founded in 2013 and is a part of the Group. We take pride in providing the platform to book bus tickets with zero booking charges. You can now choose from 10,000+ bus operators and 90,000 routes</p>
-		</div>
-		<div class="about-mid">
-			<div class="col-md-6 abt-lft wow fadeInLeft animated" data-wow-delay=".5s">
-				<h3>Culture</h3>
-				<p>Every other day new partnerships are forged - all with the aim of adding more value and convenience for our customers. We have grown organically by opening offices in key metros and inorganically through our partnerships. We encourage customers to let us know of any routes or bus operators we don't have in our list. We go right ahead and make sure that by the next time a customer logs on, we have on offer what was demanded.</p>
-				<p>Most importantly, it's a team that has fun at work. It's a team that is close knit. Everyone is on a first name basis and it wouldn't be uncommon to see people exchanging hi-fives on small achievements. Office outings are a regular phenomenon and dancing is a must.</p>
-				<p>This helps us understand what we are doing wrong and what we are getting right. This feedback is invaluable for us. And we have you, our customers, to thank for taking time off to write back to us. There are times when there are hiccups. It's a learning organization, but we are learning the ropes like our lives depend on it.</p>
-			</div>
-			<div class="col-md-6 abt-lft wow fadeInRight animated" data-wow-delay=".5s">
-				<h3>Technology</h3>
-				<p>Every other day new partnerships are forged - all with the aim of adding more value and convenience for our customers. We have grown organically by opening offices in key metros and inorganically through our partnerships. We encourage customers to let us know of any routes or bus operators we don't have in our list. We go right ahead and make sure that by the next time a customer logs on, we have on offer what was demanded.</p>
-				<p>Most importantly, it's a team that has fun at work. It's a team that is close knit. Everyone is on a first name basis and it wouldn't be uncommon to see people exchanging hi-fives on small achievements. Office outings are a regular phenomenon and dancing is a must.</p>
-				<p>This helps us understand what we are doing wrong and what we are getting right. This feedback is invaluable for us. And we have you, our customers, to thank for taking time off to write back to us. There are times when there are hiccups. It's a learning organization, but we are learning the ropes like our lives depend on it.</p>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="ab-btm">
-			<div class="col-md-8 ab-lt wow fadeInLeft animated" data-wow-delay=".5s">
-				<h3>Testimonials</h3>
-				<div class="ab-tp">
-					<p>"Its very good concept of booking bus ticket online, I got the number from a helpline at 2.00pm & by 3.30 I got my tickets booked by 3.00 for the bus at 9.00pm, when other bus service."</p>
-					<h5>- John Doe</h5>
-					<h6>- Orlando</h6>
-				</div>
-				<div class="ab-tp">
-					<p>"Its very good concept of booking bus ticket online, I got the number from a helpline at 2.00pm & by 3.30 I got my tickets booked by 3.00 for the bus at 9.00pm, when other bus service."</p>
-					<h5>- Mark Paul</h5>
-					<h6>- New Orleans</h6>
-				</div>
-				<div class="ab-tp">
-					<p>"Its very good concept of booking bus ticket online, I got the number from a helpline at 2.00pm & by 3.30 I got my tickets booked by 3.00 for the bus at 9.00pm, when other bus service."</p>
-					<h5>- Levin</h5>
-					<h6>- Designer</h6>
-				</div>
-			</div>
-			<div class="col-md-4 ab-rt wow fadeInRight animated" data-wow-delay=".5s">
-				<h3>Our Lists</h3>
-					<ul>
-						<li><a href="#">At vero eos et accusamus et iusto odio</a></li>
-						<li><a href="#">Egnissi mos ducimus qui blanditiis</a></li>
-						<li><a href="#">Rraesentium voluptatum deleniti atque</a></li>
-						<li><a href="#">At vero eos et accusamus et iusto odio</a></li>
-						<li><a href="#">Egnissi mos ducimus qui blanditiis</a></li>
-						<li><a href="#">Rraesentium voluptatum deleniti atque</a></li>
-						<li><a href="#">At vero eos et accusamus et iusto odio</a></li>
-						<li><a href="#">Egnissi mos ducimus qui blanditiis</a></li>
-						<li><a href="#">Rraesentium voluptatum deleniti atque</a></li>
-						<li><a href="#">At vero eos et accusamus et iusto odio</a></li>
-						<li><a href="#">Egnissi mos ducimus qui blanditiis</a></li>
-						<li><a href="#">Rraesentium voluptatum deleniti atque</a></li>
-						<li><a href="#">Egnissi mos ducimus qui blanditiis</a></li>
-					</ul>
-			</div>
-			<div class="clearfix"></div>
-		</div>
+		<h2 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Frequently Asked Questions</h2>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Payment-related</h3>
+		<p class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Cancellation-related</h3>
+		<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+			<ul class="animated wow fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp;">
+				<li>- Various versions have evolved over the years, sometimes by accident, sometimes on purpose</li>
+				<li>- As opposed to using 'Content here, content here', making it look like readable English.</li>
+				<li>- Sometimes by accident, sometimes on purpose Various versions have evolved over the years</li>
+				<li>- Various versions have evolved over the years, sometimes by accident, sometimes on purpose</li>
+				<li>- As opposed to using 'Content here, content here', making it look like readable English.</li>
+				<li>- Sometimes by accident, sometimes on purpose Various versions have evolved over the years</li>
+			</ul>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Insurance Related</h3>
+		<p class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Phone Booking & COD</h3>
+		<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Refund-related</h3>
+		<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+			<ul class="animated wow fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp;">
+				<li>- Various versions have evolved over the years, sometimes by accident, sometimes on purpose</li>
+				<li>- As opposed to using 'Content here, content here', making it look like readable English.</li>
+				<li>- Sometimes by accident, sometimes on purpose Various versions have evolved over the years</li>
+				<li>- Various versions have evolved over the years, sometimes by accident, sometimes on purpose</li>
+				<li>- As opposed to using 'Content here, content here', making it look like readable English.</li>
+				<li>- Sometimes by accident, sometimes on purpose Various versions have evolved over the years</li>
+			</ul>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Booking-related</h3>
+		<p class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Ticket-related</h3>
+		<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+			<ul class="animated wow fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp;">
+				<li>- Various versions have evolved over the years, sometimes by accident, sometimes on purpose</li>
+				<li>- As opposed to using 'Content here, content here', making it look like readable English.</li>
+				<li>- Sometimes by accident, sometimes on purpose Various versions have evolved over the years</li>
+				<li>- Various versions have evolved over the years, sometimes by accident, sometimes on purpose</li>
+				<li>- As opposed to using 'Content here, content here', making it look like readable English.</li>
+				<li>- Sometimes by accident, sometimes on purpose Various versions have evolved over the years</li>
+			</ul>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">General</h3>
+		<p class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
 	</div>
 </div>
-<!--- /about ---->
+<!--- /faq ---->
 <!--- footer-top ---->
 <div class="footer-top">
 	<div class="container">
@@ -225,7 +204,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 		<div class="footer-social-icons wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
 		</div>
-		<p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">© 2018 Green Wheels . All Rights Reserved </p>
+		<p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">© 2018 Green Wheels . All Rights Reserved</p>
 	</div>
 </div>
 <!--- /copy-right ---->
@@ -278,11 +257,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="login-grids">
 								<div class="login">
 									<div class="login-left">
-										<ul>
-											<li><a class="fb" href="#"><i></i>Sign in with Facebook</a></li>
-											<li><a class="goog" href="#"><i></i>Sign in with Google</a></li>
-											<li><a class="linkin" href="#"><i></i>Sign in with Linkedin</a></li>
-										</ul>
 									</div>
 									<div class="login-right">
 										<form>
@@ -305,64 +279,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
-<!-- //signin -->
-<!-- write us -->
-			<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						</div>
-							<section>
-								<div class="modal-body modal-spa">
-									<div class="writ">
-										<h4>HOW CAN WE HELP YOU</h4>
-											<ul>
-												<li class="na-me">
-													<input class="name" type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-												</li>
-												<li class="na-me">
-													<input class="Email" type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-												</li>
-												<li class="na-me">
-													<input class="number" type="text" value="Mobile Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mobile Number';}" required="">
-												</li>
-												<li class="na-me">
-													<select id="country" onchange="change_country(this.value)" class="frm-field required sect">
-														<option value="null">Select Issue</option> 		
-														<option value="null">Booking Issues</option>
-														<option value="null">Bus Cancellation</option>
-														<option value="null">Refund</option>
-														<option value="null">Wallet</option>														
-													</select>
-												</li>
-												<li class="na-me">
-													<select id="country" onchange="change_country(this.value)" class="frm-field required sect">
-														<option value="null">Select Issue</option> 		
-														<option value="null">Booking Issues</option>
-														<option value="null">Bus Cancellation</option>
-														<option value="null">Refund</option>
-														<option value="null">Wallet</option>														
-													</select>
-												</li>
-												<li class="descrip">
-													<input class="special" type="text" value="Write Description" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Write Description';}" required="">
-												</li>
-													<div class="clearfix"></div>
-											</ul>
-											<div class="sub-bn">
-												<form>
-													<button class="subbtn">Submit</button>
-												</form>
-											</div>
-									</div>
-								</div>
-							</section>
-					</div>
-				</div>
-			</div>
-<!-- //write us -->
 </body>
 </html>
-
-			

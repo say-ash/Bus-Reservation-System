@@ -7,14 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.model.BusSearch;
 import com.model.SearchResult;
+import com.model.User;
 import com.service.InterfaceSearchService;
 
 
 @Controller
+@SessionAttributes({"login","msg"})
 public class SearchController {
 
 
@@ -26,6 +30,7 @@ public class SearchController {
 	
 		System.out.println(b.getSource()+"\n"+b.getDestination()+"\n"+b.getDoj()+"\n"+b.getDor());
 		ModelAndView mv = new ModelAndView("bus");
+		
 		List<SearchResult> list = (List<SearchResult>) searchService.searchBus(b);
 		System.out.println(list.get(0).getSource());
 		mv.addObject("msg",list);
