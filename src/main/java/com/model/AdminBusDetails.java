@@ -4,7 +4,7 @@ public class AdminBusDetails {
 	 private String busName;
 	 private int numberSeats;
 	 private int busNumber;
-	 private int busType;
+	 private String busType;
 	 
 	 
 	
@@ -14,12 +14,7 @@ public class AdminBusDetails {
 	public void setBusNumber(int busNumber) {
 		this.busNumber = busNumber;
 	}
-	public int getBusType() {
-		return busType;
-	}
-	public void setBusType(int busType) {
-		this.busType = busType;
-	}
+	
 	public String getBusName() {
 		return busName;
 	}
@@ -34,6 +29,12 @@ public class AdminBusDetails {
 	}
 	public AdminBusDetails() {
 		super();
+	}
+	public String getBusType() {
+		return busType;
+	}
+	public void setBusType(String busType) {
+		this.busType = busType;
 	}
 
 	

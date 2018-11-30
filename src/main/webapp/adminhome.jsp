@@ -1,4 +1,4 @@
- <%@ page errorPage = "error.jsp" %>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link href="css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-
+    <%@ page errorPage = "error.jsp" %>
 </head>
 <body>
      
@@ -48,27 +48,30 @@
 
 
                     <li class="active-link">
-                        <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
+                        <a href="index.jsp" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
                     </li>
                    
 
                     <li>
-                        <a href="insertNewBus"><i class="fa fa-table "></i>Insert new bus  <span class="badge">Included</span></a>
+                        <a href="insertBus"><i class="fa fa-table "></i>Insert new bus  <span class="badge">Included</span></a>
                     </li>
                     <li>
-                        <a href="insertNewStop.jsp"><i class="fa fa-edit "></i>Insert new stop<span class="badge">Included</span></a>
+                        <a href="insertStop"><i class="fa fa-edit "></i>Insert new stop<span class="badge">Included</span></a>
                     </li>
 
-
+					
                     <li>
-                        <a href="updateBusDetail"><i class="fa fa-qrcode "></i>Update Bus_Details</a>
+                   		
+                        <a href="viewDetails"><i class="fa fa-qrcode "></i>View All Details</a>
+                         
                     </li>
+                   
                     <li>
                         <a href="updateStops"><i class="fa fa-bar-chart-o"></i>Update Bus Stops</a>
                     </li>
                 
                 </ul>
-                          </div>
+                            </div>
 
         </nav>
         <!-- /. NAV SIDE  -->
@@ -84,36 +87,7 @@
                 <div class="row">
                     <div class="col-lg-12 ">
                         <div class="alert alert-info">
-            <form action="addDetails" method="post">
-		<!-- ID:<input type="text" name="ID"><br> -->
-		Bus Number:<input type="number" name="busNumber"><br>
-		<input type="submit"   onclick="add_fields();" value="Add More">
-		<script>
-		var room = 1;
-		function add_fields() {
-		    room++;
-		    var objTo = document.getElementById('room_fileds')
-		    var divtest = document.createElement("div");
-		    divtest.innerHTML = '<div class="label">Room ' + room +':</div><div class="content"><span>Width: <input type="text" style="width:48px;" name="width[]" value="" /><small>(ft)</small> X</span><span>Length: <input type="text" style="width:48px;" namae="length[]" value="" /><small>(ft)</small></span></div>';
-		    
-		    objTo.appendChild(divtest)
-		}
-	    </script>
-		</form >
-		<form action="addMoreDetails" method="post">
- 		<div id="room_fileds">
-           <div>
-           
-            <div class="content">
-            	<span>Enter Bus Number <input type="Number" style="width:100px;" name="busNumber" value="" /> </span>
-                <span>Enter Bus Type<input type="text" style="width:100px;" name="busType" value="" /></span>
-                <span>Enter Bus Name <input type="text" style="width:100px;" name="busName" value="" /> </span>
-                <span>Enter Number of Seats<input type="Number" style="width:100px;" name="numberSeats" value="" /></span>
-            </div>
-           </div>
-        </div>
-        <input type="submit" value="Submit">
-</form>
+                             <strong>Welcome Admin ! </strong> You Have to Availabe Bus  For Today.
                         </div>
                        
                     </div>
@@ -121,17 +95,13 @@
                   <!-- /. ROW  --> 
                            
 				  
+                    </div>
                   <!-- /. ROW  --> 
     </div>
              <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->
-        </div>
-    
-    <div class="footer">
-      
-    
-                    </div>
+       >
           
 
      <!-- /. WRAPPER  -->

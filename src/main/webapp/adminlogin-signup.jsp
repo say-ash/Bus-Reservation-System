@@ -4,7 +4,7 @@
 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-1.12.0.min.js"></script>
- <%@ page errorPage = "error.jsp" %>
+
 
 
 </head>
@@ -21,7 +21,7 @@
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
-                        <form action="dologin" id="loginform" class="form-horizontal" role="form" method="post">
+                        <form action="dologin.html" id="loginform" class="form-horizontal" role="form" method="post">
                                     
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>

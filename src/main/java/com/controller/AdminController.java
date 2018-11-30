@@ -1,15 +1,20 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.model.AdminBusDetails;
+import com.model.BusDetail;
 import com.model.Login;
+import com.model.SearchResult;
 import com.model.StopsDetails;
 import com.service.InterfaceUserService;
 import com.service.UserService;
@@ -40,19 +45,21 @@ public class AdminController {
  }*/
 	
 	 @PostMapping("/dologin")
-	   public String doLogin(@ModelAttribute("admin") Login admin, Model model) {
+	   public ModelAndView doLogin(@ModelAttribute("admin") Login admin, Model model) {
 
 	      // Implement your business logic
 	      if (admin.getEmailId().equals("admin@gmail.com") && admin.getPassword().equals("Admin@123")) {
-	               
+	    	  return new ModelAndView("adminhome");
 	      } else {
 	         model.addAttribute("message", "Login failed. Try again.");
-	         return "index";
+	        
 	      }
-	      return "adminhome";
+		return null;
+		
+	      
 	   }
 	 
-	 @PostMapping("/addDetails")
+	/* @PostMapping("/addDetails")
 	   public  ModelAndView addDetails(@ModelAttribute AdminBusDetails br, Model model) {
 
 	      // Implement your business logic
@@ -61,21 +68,37 @@ public class AdminController {
 			 return new ModelAndView("UpdateBus");
 		 }
 		return new ModelAndView("UpdateBus"); 
-	   }
+	   }*/
+	 
+	 @GetMapping("/viewDetails")
+		 public ModelAndView viewDetails() {
+		
+		 List<AdminBusDetails> viewList = userservice.viewBusDetails();
+		 System.out.println(viewList.get(0).getBusNumber());
+		 ModelAndView mv= new ModelAndView("viewAllDetail");
+		 mv.addObject("list", viewList);
+		 
+		 
+		 
+			return mv;
+			 
+		 }
 	
-	 @PostMapping("/addMoreDetails")
+	
+	 @PostMapping("/insertBus")
 	   public  ModelAndView addMoreDetails(@ModelAttribute AdminBusDetails br, Model model) {
-
-	      // Implement your business logic
-		 int i = userservice.UpdateBus(br);
-		 if(br.getBusNumber()==i) {
-			userservice.AddBusDetails(br);
-		 }
-		 else {
-			 userservice.insertNewBus(br);
-		 }
-		return new ModelAndView("successfull"); 
+		 int i=userservice.UpdateBus(br);
+		 if(i==0) {
+		 int i1=userservice.insertNewBus(br);
+		 if(i1 == 0) {
+			 return new ModelAndView("unsuccessfull"); 
 	   }
+		 else {
+			 return new ModelAndView("successfull");
+		 }
+	 }
+		 return new ModelAndView("not");
+	 }
 	 @PostMapping("/addMoreStops")
 	   public  ModelAndView addMoreStopsDetails(@ModelAttribute StopsDetails sd, Model model) {
 

@@ -58,6 +58,11 @@ public class UserService implements InterfaceUserService {
 		
 	}
 
+	public List<AdminBusDetails> viewBusDetails() {
+		// TODO Auto-generated method stub
+		return AdminDao.viewBusDetails();
+	}
+
 	
 	
 

@@ -1,11 +1,16 @@
 package com.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 import java.util.Map;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
 import com.model.AdminBusDetails;
+import com.model.SearchResult;
 import com.model.StopsDetails;
 
 
@@ -21,14 +26,21 @@ public class AddBusDetailsDao implements InterfaceBusDetailsDao {
 		String query1 = "select GROUP9_BUS_DETAILS_SEQ.nextval from dual";
 		int query2 = getSeq(query1);
 	 String query="insert into GROUP9_BUS_DETAILS values("+query2+",'"+br.getBusName()+"',"+br.getNumberSeats()+")";  
-	    return jdbcTemplate.update(query);  
+	 String query4="select GROUP9_BUS_TYPES_SEQ.nextval from dual";
+	 int query5=getSeq1(query4);
+	 String query3="insert into GROUP9_BUS_TYPES values("+query5+","+query2+",'"+br.getBusType()+"')";
+	    return jdbcTemplate.update(query,query3);  
 }
 
-	private int getSeq(String query1) {
+	/*private int getSeq(String query1) {
 		int res = jdbcTemplate.queryForObject(query1, Integer.class);
 		return res;
 	}
-	
+	private int getSeq1(String query4) {
+		int res = jdbcTemplate.queryForObject(query4, Integer.class);
+		return res;
+	}
+	*/
 	
 	public int UpdateBus(AdminBusDetails br) {
 		
@@ -58,11 +70,29 @@ public class AddBusDetailsDao implements InterfaceBusDetailsDao {
 			String query1 = "select GROUP9_BUS_DETAILS_SEQ.nextval from dual";
 			int query2 = getSeq(query1);
 		 String query3="insert into GROUP9_BUS_DETAILS values("+query2+",'"+br.getBusName()+"',"+br.getNumberSeats()+")"; 
-		 String query5 = "select GROUP9_BUS_TYPES_SEQ.nextval from dual";
-			int query6 = getSeq(query5);
-		 String query4="insert into GROUP9_BUS_TYPES values("+query6+","+query2+",'"+br.getBusType()+")";
-		    return jdbcTemplate.update(query3,query4); 
+		 String query4 = "select GROUP9_BUS_TYPES_SEQ.nextval from dual";
+			int query5 = getSeq1(query4);
+		 String query6="insert into GROUP9_BUS_TYPES values("+query5+","+query2+",'"+br.getBusType()+")";
+		    return jdbcTemplate.update(query3,query6); 
 		}
+		private int getSeq(String query1) {
+			int res = jdbcTemplate.queryForObject(query1, Integer.class);
+			return res;
+		}
+		private int getSeq1(String query4) {
+			int res = jdbcTemplate.queryForObject(query4, Integer.class);
+			return res;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		public int UpdateStops(StopsDetails sd) {
 			try {
 				String query = "select GBS_ID from GROUP9_BUS_STOPS where GBS_ID= " + sd.getBusNumber();
@@ -92,7 +122,30 @@ public class AddBusDetailsDao implements InterfaceBusDetailsDao {
 		
 			return jdbcTemplate.update(query3 );
 		}
-	}
+
+		public List<AdminBusDetails> viewBusDetails() {
+			String q="select d.GBD_ID,  d.GBD_NAME , d.GBD_NUMBER_OF_SEATS , t.GBT_TYPE from  GROUP9_BUS_DETAILS d join GROUP9_BUS_TYPES t on (d.GBD_ID=t.GBT_BD_ID)";
+			return jdbcTemplate.query(q,new RowMapper<AdminBusDetails>(){
+
+				public AdminBusDetails mapRow(ResultSet rs, int rowNum) throws SQLException {
+					AdminBusDetails ad =new AdminBusDetails(); 
+	                ad.setBusNumber(rs.getInt(1));
+	                ad.setBusName(rs.getString(2));
+	                ad.setNumberSeats(rs.getInt(3));
+	                ad.setBusType(rs.getString(3));
+	               
+				       
+				       
+				        return ad;
+			
+			
+			
+			
+		}
+			});
+		}
+}
+	
 
 
 
