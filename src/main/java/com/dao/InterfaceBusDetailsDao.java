@@ -3,6 +3,7 @@ package com.dao;
 import java.util.List;
 
 import com.model.AdminBusDetails;
+import com.model.BusStatus;
 import com.model.StopsDetails;
 import com.model.User;
 
@@ -17,5 +18,6 @@ public interface InterfaceBusDetailsDao {
 	public int UpdateNewStops(StopsDetails sd);
 	public int AddNewStops(StopsDetails sd);
 	public List<AdminBusDetails> viewBusDetails();
+	public List<BusStatus> StatusView();
 	
 }

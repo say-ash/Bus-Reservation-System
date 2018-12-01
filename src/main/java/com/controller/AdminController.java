@@ -99,19 +99,17 @@ public class AdminController {
 	 }
 		 return new ModelAndView("not");
 	 }
-	 @PostMapping("/addMoreStops")
+	 @PostMapping("/insertStop")
 	   public  ModelAndView addMoreStopsDetails(@ModelAttribute StopsDetails sd, Model model) {
-
-	      // Implement your business logic
-		 int i = userservice.UpdateStops(sd);
-		 if(sd.getBusNumber()==i) {
-			 userservice.UpdateNewStops(sd);
-		 }
-		 else {
-			 userservice.AddNewStops(sd);
-		 }
-		 
-		return new ModelAndView("successfull"); 
+		 	
+		 		userservice.AddNewStops(sd);
+			 return new ModelAndView("successfull"); 
+	   }
+	 @PostMapping("/insertStop")
+	   public  ModelAndView status(@ModelAttribute  Model model) {
+		 	
+		 		userservice.StatusView();
+			 return new ModelAndView("successfull"); 
 	   }
 	 
 

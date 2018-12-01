@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.dao.InterfaceBusDetailsDao;
 import com.dao.InterfaceUserDao;
 import com.model.AdminBusDetails;
+import com.model.BusStatus;
 import com.model.Login;
 import com.model.StopsDetails;
 import com.model.User;
@@ -61,6 +62,11 @@ public class UserService implements InterfaceUserService {
 	public List<AdminBusDetails> viewBusDetails() {
 		// TODO Auto-generated method stub
 		return AdminDao.viewBusDetails();
+	}
+
+	public List<BusStatus> StatusView() {
+		// TODO Auto-generated method stub
+		return AdminDao.StatusView();
 	}
 
 	

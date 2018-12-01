@@ -3,14 +3,10 @@ package com.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-
-import java.util.Map;
-
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-
 import com.model.AdminBusDetails;
-import com.model.SearchResult;
+import com.model.BusStatus;
 import com.model.StopsDetails;
 
 
@@ -83,15 +79,7 @@ public class AddBusDetailsDao implements InterfaceBusDetailsDao {
 			int res = jdbcTemplate.queryForObject(query4, Integer.class);
 			return res;
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 		
 		public int UpdateStops(StopsDetails sd) {
 			try {
@@ -115,14 +103,22 @@ public class AddBusDetailsDao implements InterfaceBusDetailsDao {
 			
 		public int AddNewStops(StopsDetails sd) {
 			String query1 = "select GROUP9_BUS_STOPS_SEQ.nextval from dual";
-			int query2 = getSeq(query1);
+			int query2 = getSeq3(query1);
 			
 			
 			String query3="insert into GROUP9_BUS_STOPS values ("+query2+","+sd.getBusNumber()+",'"+sd.getStopName()+"',"+sd.getStopOrder()+",'"+sd.getArivalTime()+"','"+sd.getDepartureTime()+"',"+sd.getDistance()+","+sd.getPrice()+")";
 		
 			return jdbcTemplate.update(query3 );
 		}
-
+		private int getSeq3(String query1) {
+			int res = jdbcTemplate.queryForObject(query1, Integer.class);
+			return res;
+		}
+		
+		
+		
+		
+		
 		public List<AdminBusDetails> viewBusDetails() {
 			String q="select d.GBD_ID,  d.GBD_NAME , d.GBD_NUMBER_OF_SEATS , t.GBT_TYPE from  GROUP9_BUS_DETAILS d join GROUP9_BUS_TYPES t on (d.GBD_ID=t.GBT_BD_ID)";
 			return jdbcTemplate.query(q,new RowMapper<AdminBusDetails>(){
@@ -144,6 +140,31 @@ public class AddBusDetailsDao implements InterfaceBusDetailsDao {
 		}
 			});
 		}
+
+		public List<BusStatus> StatusView() {
+			String query1="select gbd.GBD_ID, gbsc.GBSC_DATE , gbsc.GBSC_STATUS, gbd.GBD_NAME  from GROUP9_BUS_STATUS_CHECK gbsc inner join GROUP9_BUS_DETAILS gbd on gbsc.GBSC_GBD_ID= gbd.GBD_ID";
+			return jdbcTemplate.query(query1, new RowMapper<BusStatus>() {
+
+				public BusStatus mapRow(ResultSet rs, int rowNum) throws SQLException {
+					BusStatus bs= new BusStatus();
+					bs.setBusNumber(rs.getInt(1));
+					bs.setBusDate(rs.getString(2));
+					bs.setBusStatus(rs.getString(3));
+					bs.setBusName(rs.getString(4));
+					
+					return bs;
+				}
+				
+			});
+		}
+				
+			
+				
+		
+			
+	
+			
+		
 }
 	
 

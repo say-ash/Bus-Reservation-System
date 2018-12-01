@@ -96,7 +96,7 @@
 <input type="submit" value="Submit"  onclick="add_fields();" value="Add More">
 </form ><br> -->
 
-<form action="addMoreStops" method="post">
+<form action="insertStop" method="post">
  <div id="room_fileds">
            <div>
             <div class='label'>details:</div>

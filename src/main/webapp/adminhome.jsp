@@ -53,10 +53,10 @@
                    
 
                     <li>
-                        <a href="insertBus"><i class="fa fa-table "></i>Insert new bus  <span class="badge">Included</span></a>
+                        <a href="insertNewBus.jsp"><i class="fa fa-table "></i>Insert new bus  <span class="badge">Included</span></a>
                     </li>
                     <li>
-                        <a href="insertStop"><i class="fa fa-edit "></i>Insert new stop<span class="badge">Included</span></a>
+                        <a href="insertNewStop.jsp"><i class="fa fa-edit "></i>Insert new stop<span class="badge">Included</span></a>
                     </li>
 
 					

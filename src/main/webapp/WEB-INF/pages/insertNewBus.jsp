@@ -89,7 +89,7 @@
 		
 		
 		</form >
-		<form action="addMoreDetails" method="post">
+		<form action="insertBus" method="post">
  		<div id="room_fileds">
            <div>
            
